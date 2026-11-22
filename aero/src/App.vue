@@ -1,8 +1,14 @@
-<script setup lang="ts"></script>
+<script setup>
+import HeaderSection from './components/HeaderSection.vue'
+import FooterSection from './components/FooterSection.vue'
+</script>
 
 <template>
-  <h1>Aero</h1>
-  
+  <div id="estrutura-aplicacao">
+    <HeaderSection />
+    <main id="conteudo-principal">
+      <router-view />
+    </main>
+    <FooterSection />
+  </div>
 </template>
-
-<style scoped></style>

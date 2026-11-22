@@ -1,0 +1,124 @@
+:root {
+  --laranja: #ff5a00;
+  --laranja-escuro: #d94b00;
+  --laranja-claro: #fff1e8;
+  --grafite: #2b2b2b;
+  --cinza-texto: #595959;
+  --cinza-borda: #dfe3e8;
+  --fundo-site: #f4f5f7;
+  --branco: #ffffff;
+  --verde: #15803d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+  background-color: var(--fundo-site);
+  color: var(--grafite);
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.pagina-interna {
+  padding-top: 36px;
+  padding-bottom: 40px;
+}
+
+.titulo-secao {
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: var(--grafite);
+  margin-bottom: 6px;
+}
+
+.subtitulo-secao {
+  font-size: 0.95rem;
+  color: var(--cinza-texto);
+  margin-bottom: 24px;
+}
+
+.card-branco {
+  background-color: var(--branco);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+}
+
+.btn-laranja {
+  background-color: var(--laranja);
+  color: var(--branco);
+  border: none;
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.92rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.btn-laranja:hover {
+  background-color: var(--laranja-escuro);
+}
+
+.btn-contorno {
+  background-color: transparent;
+  color: var(--laranja);
+  border: 2px solid var(--laranja);
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-contorno:hover {
+  background-color: var(--laranja-claro);
+}
+
+.campo-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.campo-grupo label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--cinza-texto);
+}
+
+.campo-grupo input,
+.campo-grupo select,
+.campo-grupo textarea {
+  padding: 11px 14px;
+  border: 1px solid var(--cinza-borda);
+  border-radius: 8px;
+  font-size: 0.92rem;
+  color: var(--grafite);
+  background-color: var(--branco);
+}
+
+.campo-grupo input:focus,
+.campo-grupo select:focus,
+.campo-grupo textarea:focus {
+  outline: 2px solid var(--laranja);
+  border-color: transparent;
+}
