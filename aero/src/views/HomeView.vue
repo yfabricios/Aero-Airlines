@@ -108,7 +108,7 @@ function comprarVoo(voo) {
 
 <template>
   <div id="pagina-home">
-    <section id="hero-banner" class="banner-laranja">
+    <section id="hero-banner" class="banner-ceu">
       <div class="container conteudo-hero">
         <span class="tag-destaque">PROMOÇÃO VOO PREMIADO • DESTINOS DO BRASIL</span>
         <h1 class="titulo-hero">Antecipamos as ofertas! Passagens a partir de R$ 205,59*</h1>
@@ -195,8 +195,8 @@ function comprarVoo(voo) {
 </template>
 
 <style scoped>
-.banner-laranja {
-  background: linear-gradient(125deg, #ff5a00 0%, #ff8833 100%);
+.banner-ceu {
+  background: linear-gradient(125deg, #0369a1 0%, #0284c7 52%, #38bdf8 100%);
   color: var(--branco);
   padding: 54px 0 94px;
 }
@@ -236,7 +236,7 @@ function comprarVoo(voo) {
 
 .item-servico {
   padding: 22px;
-  border-left: 4px solid var(--laranja);
+  border-left: 4px solid var(--azul-principal);
   transition: transform 0.2s;
 }
 

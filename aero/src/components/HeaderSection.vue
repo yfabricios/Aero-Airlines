@@ -1,141 +1,139 @@
 <script setup>
-import { ref } from 'vue'
-import { useSuporteStore } from '@/stores/useSuporteStore'
+import { useRouter } from 'vue-router'
+import { useReservasStore } from '@/stores/useReservasStore'
 
-const suporteStore = useSuporteStore()
-const emailNewsletter = ref('')
-const avisoCadastro = ref('')
+const router = useRouter()
+const reservasStore = useReservasStore()
 
-function enviarNewsletter() {
-  if (!emailNewsletter.value.includes('@')) return
-  suporteStore.salvarEmailNewsletter(emailNewsletter.value)
-  avisoCadastro.value = 'E-mail cadastrado com sucesso para receber promoções!'
-  emailNewsletter.value = ''
+function irParaSecao(idSecao) {
+  router.push('/').then(() => {
+    setTimeout(() => {
+      const elemento = document.getElementById(idSecao)
+      if (elemento) {
+        elemento.scrollIntoView({ behavior: 'smooth' })
+      }
+    }, 100)
+  })
 }
 </script>
 
 <template>
-  <footer id="rodape-site" class="rodape-geral">
-    <div id="faixa-newsletter" class="bloco-newsletter">
-      <div class="container flex-newsletter">
-        <div class="texto-newsletter">
-          <h3>Receba novidades</h3>
-          <p>Se inscreva em nossa newsletter e fique por dentro de ofertas e novidades.</p>
-        </div>
+  <header id="cabecalho-principal" class="faixa-externa-header">
+    <div id="barra-pilula-header" class="container-pilula">
+      <!-- Logo AERO em Azul Céu -->
+      <router-link to="/" id="logo-aero" class="logo-marca" title="Ir para Home">
+        <span class="texto-azul-escuro">AER</span><span class="texto-azul-claro">O</span>
+      </router-link>
 
-        <form id="form-newsletter" class="linha-form-news" @submit.prevent="enviarNewsletter">
-          <input
-            id="input-email-news"
-            type="email"
-            v-model="emailNewsletter"
-            placeholder="Digite seu email"
-            required
-          />
-          <button type="submit" class="btn-laranja">Enviar</button>
-        </form>
-      </div>
-      <div v-if="avisoCadastro" class="container mensagem-verde">{{ avisoCadastro }}</div>
+      <!-- Menu de navegação -->
+      <nav id="menu-navegacao" class="lista-menu">
+        <router-link to="/checkin" class="link-menu">Check-in</router-link>
+
+        <router-link to="/minhas-viagens" class="link-menu link-com-badge">
+          Minhas Viagens
+          <span v-if="reservasStore.reservas.length" class="contador-viagens">
+            {{ reservasStore.reservas.length }}
+          </span>
+        </router-link>
+
+        <a href="#secao-gerencie-viagem" class="link-menu" @click.prevent="irParaSecao('secao-gerencie-viagem')">
+          Serviços
+        </a>
+
+        <router-link to="/informacoes" class="link-menu">Informações</router-link>
+
+        <router-link to="/atendimento" class="link-menu">Atendimento</router-link>
+
+        <a href="#secao-ofertas" class="link-menu" @click.prevent="irParaSecao('secao-ofertas')">
+          Ofertas
+        </a>
+
+        <a href="#secao-ofertas" class="link-menu" @click.prevent="irParaSecao('secao-ofertas')">
+          Hotéis
+        </a>
+
+        <a href="#secao-ofertas" class="link-menu" @click.prevent="irParaSecao('secao-ofertas')">
+          Pacotes
+        </a>
+
+        <a href="#secao-gerencie-viagem" class="link-menu" @click.prevent="irParaSecao('secao-gerencie-viagem')">
+          Negócios
+        </a>
+      </nav>
     </div>
-
-    <div id="links-rodape" class="container grid-rodape">
-      <div class="coluna-rodape">
-        <h4>Sobre a Aero Airlines</h4>
-        <p>Voando alto com tarifas acessíveis, conforto e atendimento digital.</p>
-      </div>
-
-      <div class="coluna-rodape">
-        <h4>Navegação Rápida</h4>
-        <div class="lista-links-rodape">
-          <router-link to="/">Home</router-link>
-          <router-link to="/checkin">Check-in Online</router-link>
-          <router-link to="/minhas-viagens">Minhas Viagens</router-link>
-        </div>
-      </div>
-
-      <div class="coluna-rodape">
-        <h4>Suporte ao Passageiro</h4>
-        <div class="lista-links-rodape">
-          <router-link to="/informacoes">Informações de Bagagem e Documentos</router-link>
-          <router-link to="/atendimento">Central de Atendimento</router-link>
-        </div>
-      </div>
-    </div>
-
-    <div id="direitos-autorais" class="faixa-legal">
-      Aero Airlines Linhas Aéreas S.A. — Projeto Vue 3 + Vite + Pinia + API IBGE & Wikipédia.
-    </div>
-  </footer>
+  </header>
 </template>
 
 <style scoped>
-.rodape-geral {
-  background-color: var(--branco);
-  border-top: 1px solid var(--cinza-borda);
-  margin-top: 60px;
+.faixa-externa-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2eef8;
+  padding: 14px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.bloco-newsletter {
-  background-color: var(--grafite);
-  color: var(--branco);
-  padding: 28px 0;
-}
-
-.flex-newsletter {
+.container-pilula {
+  max-width: 1240px;
+  margin: 0 auto;
+  background-color: #eef6fc;
+  border-radius: 999px;
+  padding: 16px 36px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 34px;
   flex-wrap: wrap;
-  gap: 16px;
 }
 
-.linha-form-news {
+.logo-marca {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  line-height: 1;
+}
+
+.texto-azul-escuro {
+  color: #0284c7;
+}
+
+.texto-azul-claro {
+  color: #7dd3fc;
+}
+
+.lista-menu {
   display: flex;
-  gap: 10px;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
 }
 
-.linha-form-news input {
-  height: 44px;
-  padding: 0 14px;
-  border-radius: 8px;
-  border: none;
-  min-width: 240px;
+.link-menu {
+  color: #0f2942;
+  font-size: 0.95rem;
+  font-weight: 700;
+  transition: color 0.2s;
+  cursor: pointer;
 }
 
-.mensagem-verde {
-  color: #4ade80;
-  font-size: 0.85rem;
-  margin-top: 8px;
+.link-menu:hover, .link-menu.router-link-active {
+  color: #0284c7;
 }
 
-.grid-rodape {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 32px;
-  padding: 36px 20px;
+.link-com-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
-.coluna-rodape h4 {
-  color: var(--laranja);
-  margin-bottom: 12px;
-}
-
-.lista-links-rodape {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  color: var(--cinza-texto);
-  font-size: 0.92rem;
-}
-
-.lista-links-rodape a:hover {
-  color: var(--laranja);
-}
-
-.faixa-legal {
-  background-color: var(--fundo-site);
-  text-align: center;
-  padding: 16px;
-  font-size: 0.82rem;
-  color: var(--cinza-texto);
+.contador-viagens {
+  background-color: #0284c7;
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 999px;
 }
 </style>

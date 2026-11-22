@@ -1,11 +1,19 @@
 :root {
-  --laranja: #ff5a00;
-  --laranja-escuro: #d94b00;
-  --laranja-claro: #fff1e8;
-  --grafite: #2b2b2b;
-  --cinza-texto: #595959;
-  --cinza-borda: #dfe3e8;
-  --fundo-site: #f4f5f7;
+  /* Paleta Azul Céu + Branco */
+  --azul-principal: #0284c7;
+  --azul-escuro: #0369a1;
+  --azul-claro: #e0f2fe;
+  --azul-noturno: #0f2942;
+
+  /* Compatibilidade automática com todas as outras páginas e componentes */
+  --laranja: var(--azul-principal);
+  --laranja-escuro: var(--azul-escuro);
+  --laranja-claro: var(--azul-claro);
+  --grafite: var(--azul-noturno);
+
+  --cinza-texto: #475569;
+  --cinza-borda: #dbeafe;
+  --fundo-site: #f3f8fc;
   --branco: #ffffff;
   --verde: #15803d;
 }
@@ -55,11 +63,12 @@ a {
 .card-branco {
   background-color: var(--branco);
   border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 4px 18px rgba(2, 132, 199, 0.08);
+  border: 1px solid #e6f0fa;
 }
 
 .btn-laranja {
-  background-color: var(--laranja);
+  background-color: var(--azul-principal);
   color: var(--branco);
   border: none;
   padding: 12px 22px;
@@ -74,13 +83,13 @@ a {
 }
 
 .btn-laranja:hover {
-  background-color: var(--laranja-escuro);
+  background-color: var(--azul-escuro);
 }
 
 .btn-contorno {
-  background-color: transparent;
-  color: var(--laranja);
-  border: 2px solid var(--laranja);
+  background-color: var(--branco);
+  color: var(--azul-principal);
+  border: 2px solid var(--azul-principal);
   padding: 10px 18px;
   border-radius: 8px;
   font-weight: 700;
@@ -90,7 +99,7 @@ a {
 }
 
 .btn-contorno:hover {
-  background-color: var(--laranja-claro);
+  background-color: var(--azul-claro);
 }
 
 .campo-grupo {
@@ -105,9 +114,7 @@ a {
   color: var(--cinza-texto);
 }
 
-.campo-grupo input,
-.campo-grupo select,
-.campo-grupo textarea {
+.campo-grupo input, .campo-grupo select, .campo-grupo textarea {
   padding: 11px 14px;
   border: 1px solid var(--cinza-borda);
   border-radius: 8px;
@@ -119,6 +126,6 @@ a {
 .campo-grupo input:focus,
 .campo-grupo select:focus,
 .campo-grupo textarea:focus {
-  outline: 2px solid var(--laranja);
+  outline: 2px solid var(--azul-principal);
   border-color: transparent;
 }
