@@ -1,5 +1,5 @@
 export const cidadesDestaqueData = [
-  'Rio de Janeiro',
+  'Cacoal',
   'Salvador',
   'São Paulo',
   'Fortaleza',

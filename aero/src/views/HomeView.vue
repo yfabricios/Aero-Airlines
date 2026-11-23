@@ -88,7 +88,7 @@ async function pesquisarNovaCidade() {
       ...destinosCards.value.filter(
         (item) => item.cidade.toLowerCase() !== novoDestino.cidade.toLowerCase()
       )
-    ]
+    ].slice(0, 6)
 
     const secaoOfertas = document.getElementById('secao-ofertas')
     if (secaoOfertas) secaoOfertas.scrollIntoView({ behavior: 'smooth' })
@@ -110,8 +110,7 @@ function comprarVoo(voo) {
   <div id="pagina-home">
     <section id="hero-banner" class="banner-ceu">
       <div class="container conteudo-hero">
-        <span class="tag-destaque">PROMOÇÃO VOO PREMIADO • DESTINOS DO BRASIL</span>
-        <h1 class="titulo-hero">Antecipamos as ofertas! Passagens a partir de R$ 205,59*</h1>
+        <h1 class="titulo-hero">DESTINOS INCRÍVEIS PELO BRASIL COM PROMOÇÕES</h1> <!-- Precisa editar o tamanho do h1 no css para deixar menor -->
         <p class="texto-hero">
           Digite qualquer cidade do Brasil abaixo para ver fotos reais, estado e tarifas na hora.
         </p>
@@ -131,25 +130,21 @@ function comprarVoo(voo) {
 
       <div id="grid-servicos" class="grade-quatro-colunas">
         <router-link to="/checkin" id="atalho-checkin" class="card-branco item-servico">
-          <div class="icone-servico">✔</div>
           <h3>Check-in</h3>
           <p>Faça o check-in e confirme sua presença no voo.</p>
         </router-link>
 
         <router-link to="/minhas-viagens" id="atalho-viagens" class="card-branco item-servico">
-          <div class="icone-servico">🧳</div>
           <h3>Minhas Viagens</h3>
           <p>Consulte suas reservas, localizador e assento.</p>
         </router-link>
 
         <router-link to="/informacoes" id="atalho-informacoes" class="card-branco item-servico">
-          <div class="icone-servico">📋</div>
           <h3>Informações</h3>
           <p>Veja regras de bagagem, tarifas e documentos para viajar.</p>
         </router-link>
 
         <router-link to="/atendimento" id="atalho-atendimento" class="card-branco item-servico">
-          <div class="icone-servico">💬</div>
           <h3>Atendimento</h3>
           <p>Tire dúvidas no FAQ ou abra um protocolo de suporte.</p>
         </router-link>
@@ -242,11 +237,6 @@ function comprarVoo(voo) {
 
 .item-servico:hover {
   transform: translateY(-3px);
-}
-
-.icone-servico {
-  font-size: 1.45rem;
-  margin-bottom: 10px;
 }
 
 .item-servico h3 {

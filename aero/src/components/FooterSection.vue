@@ -62,7 +62,7 @@ function enviarNewsletter() {
     </div>
 
     <div id="direitos-autorais" class="faixa-legal">
-      Aero Airlines Linhas Aéreas S.A. — Projeto Vue 3 + Vite + Pinia + API IBGE & Wikipédia.
+      Aero Airlines Linhas Aéreas S.A.
     </div>
   </footer>
 </template>
