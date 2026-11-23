@@ -23,7 +23,7 @@ const reservasStore = useReservasStore()
             Localizador: <strong>{{ bilhete.codigo }}</strong>
           </div>
           <div class="status-box" :class="{ concluido: bilhete.checkinRealizado }">
-            {{ bilhete.checkinRealizado ? '✔ Check-in Realizado' : '⏳ Aguardando Check-in' }}
+            {{ bilhete.checkinRealizado ? ' Check-in Realizado' : ' Aguardando Check-in' }}
           </div>
         </div>
 
