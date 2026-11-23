@@ -48,17 +48,6 @@ function irParaSecao(idSecao) {
           Ofertas
         </a>
 
-        <a href="#secao-ofertas" class="link-menu" @click.prevent="irParaSecao('secao-ofertas')">
-          Hotéis
-        </a>
-
-        <a href="#secao-ofertas" class="link-menu" @click.prevent="irParaSecao('secao-ofertas')">
-          Pacotes
-        </a>
-
-        <a href="#secao-gerencie-viagem" class="link-menu" @click.prevent="irParaSecao('secao-gerencie-viagem')">
-          Negócios
-        </a>
       </nav>
     </div>
   </header>

@@ -210,9 +210,9 @@ function comprarVoo(voo) {
 }
 
 .titulo-hero {
-  font-size: 2.15rem;
+  font-size: 2.70rem;
   margin: 14px 0 10px;
-  line-height: 1.2;
+  line-height: 1.5;
 }
 
 .area-busca-flutuante {
