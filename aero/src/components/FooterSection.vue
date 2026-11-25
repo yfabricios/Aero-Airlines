@@ -59,6 +59,15 @@ function enviarNewsletter() {
           <router-link to="/atendimento">Central de Atendimento</router-link>
         </div>
       </div>
+
+      <div class="coluna-rodape">
+        <h4>Entre em contato conosco</h4>
+        <div class="lista-links-rodape">
+          <a href="#" target="_blank">Instagram</a>
+          <a href="#" target="_blank">Facebook</a>
+          <a href="#" target="_blank">X (Twitter)</a>
+        </div>
+      </div>
     </div>
 
     <div id="direitos-autorais" class="faixa-legal">
@@ -109,7 +118,7 @@ function enviarNewsletter() {
 
 .grid-rodape {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 32px;
   padding: 36px 20px;
 }
@@ -129,6 +138,45 @@ function enviarNewsletter() {
 
 .lista-links-rodape a:hover {
   color: var(--laranja);
+}
+
+.lista-redes {
+  display: flex;
+  gap: 10px;
+}
+
+.link-rede {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--fundo-site);
+  color: var(--cinza-texto);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+}
+
+.link-rede svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.link-rede svg.icone-x {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  stroke: none;
+}
+
+.link-rede:hover {
+  background-color: var(--laranja);
+  color: var(--branco);
 }
 
 .faixa-legal {
