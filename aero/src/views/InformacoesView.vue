@@ -14,28 +14,28 @@ const suporteStore = useSuporteStore()
 
     <div id="grade-topicos-info" class="grid-info">
       <div id="info-bagagem" class="card-branco bloco-info">
-        <h3>🧳 Bagagem de Mão e Despachada</h3>
+        <h3> Bagagem de Mão e Despachada</h3>
         <p>
           Todos os passageiros têm direito gratuito a 1 artigo pessoal (bolsa ou mochila) e 1 bagagem de mão de até 10 kg na cabine.
         </p>
       </div>
 
       <div id="info-documentos" class="card-branco bloco-info">
-        <h3>🪪 Documentos para Viajar</h3>
+        <h3> Documentos para Viajar</h3>
         <p>
           Para voos nacionais, apresente RG original, CNH ou carteira profissional. Para voos internacionais, passaporte válido é obrigatório.
         </p>
       </div>
 
       <div id="info-remarcacao" class="card-branco bloco-info">
-        <h3>🔄 Remarcação e Cancelamento</h3>
+        <h3> Remarcação e Cancelamento</h3>
         <p>
           Altere a data ou o horário do seu voo diretamente em Minhas Viagens com até 1 hora de antecedência ao embarque.
         </p>
       </div>
 
       <div id="info-tarifas" class="card-branco bloco-info">
-        <h3>🎟 Nossas Tarifas (Promo, Light, Plus e Max)</h3>
+        <h3> Nossas Tarifas (Promo, Light, Plus e Max)</h3>
         <p>
           Escolha entre tarifas econômicas apenas com bagagem de mão ou pacotes completos com despacho de mala e assento Conforto.
         </p>

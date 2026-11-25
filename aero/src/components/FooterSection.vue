@@ -40,7 +40,7 @@ function enviarNewsletter() {
     <div id="links-rodape" class="container grid-rodape">
       <div class="coluna-rodape">
         <h4>Sobre a Aero Airlines</h4>
-        <p>Voando alto com tarifas acessíveis, conforto e atendimento digital.</p>
+        <p>Somos uma companhia aérea focada na maior economia, satisfação, proveito e momentos felizes de nossos clientes.</p>
       </div>
 
       <div class="coluna-rodape">
