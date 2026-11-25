@@ -124,7 +124,9 @@ a {
   background-color: var(--branco);
 }
 
-.campo-grupo input:focus, .campo-grupo select:focus, .campo-grupo textarea:focus {
+.campo-grupo input:focus,
+.campo-grupo select:focus,
+.campo-grupo textarea:focus {
   outline: 2px solid var(--azul-principal);
   border-color: transparent;
 }
