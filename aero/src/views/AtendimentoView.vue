@@ -122,13 +122,11 @@ function enviarSolicitacao() {
   gap: 20px;
 }
 
-.bloco-faq,
-.bloco-form {
+.bloco-faq, .bloco-form {
   padding: 26px;
 }
 
-.bloco-faq h3,
-.bloco-form h3 {
+.bloco-faq h3, .bloco-form h3 {
   margin-bottom: 16px;
   color: var(--laranja);
 }

@@ -36,16 +36,17 @@ function irParaSecao(idSecao) {
           </span>
         </router-link>
 
-        <a href="#secao-gerencie-viagem" class="link-menu" @click.prevent="irParaSecao('secao-gerencie-viagem')">
-          Serviços
-        </a>
-
+        
         <router-link to="/informacoes" class="link-menu">Informações</router-link>
-
+        
         <router-link to="/atendimento" class="link-menu">Atendimento</router-link>
-
+        
         <a href="#secao-ofertas" class="link-menu" @click.prevent="irParaSecao('secao-ofertas')">
           Ofertas
+        </a>
+        
+        <a href="#secao-gerencie-viagem" class="link-menu" @click.prevent="irParaSecao('secao-gerencie-viagem')">
+          Serviços
         </a>
       </nav>
     </div>
@@ -63,6 +64,7 @@ function irParaSecao(idSecao) {
 }
 
 .container-pilula {
+  width: fit-content;
   max-width: 1240px;
   margin: 0 auto;
   background-color: #eef6fc;

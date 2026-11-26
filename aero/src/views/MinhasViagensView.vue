@@ -16,8 +16,8 @@ const reservasStore = useReservasStore()
         v-for="bilhete in reservasStore.reservas"
         :key="bilhete.codigo"
         :id="'bilhete-' + bilhete.codigo"
-        class="card-branco card-bilhete"
-      >
+        class="card-branco card-bilhete">
+        
         <div class="topo-bilhete">
           <div class="codigo-box">
             Localizador: <strong>{{ bilhete.codigo }}</strong>

@@ -140,45 +140,6 @@ function enviarNewsletter() {
   color: var(--laranja);
 }
 
-.lista-redes {
-  display: flex;
-  gap: 10px;
-}
-
-.link-rede {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background-color: var(--fundo-site);
-  color: var(--cinza-texto);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.2s;
-}
-
-.link-rede svg {
-  width: 18px;
-  height: 18px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.link-rede svg.icone-x {
-  width: 16px;
-  height: 16px;
-  fill: currentColor;
-  stroke: none;
-}
-
-.link-rede:hover {
-  background-color: var(--laranja);
-  color: var(--branco);
-}
-
 .faixa-legal {
   background-color: var(--fundo-site);
   text-align: center;

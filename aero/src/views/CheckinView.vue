@@ -62,8 +62,7 @@ function confirmarEmbarque() {
           <button
             v-if="!item.checkinRealizado"
             class="btn-contorno"
-            @click="reservasStore.realizarCheckin(item.codigo)"
-          >
+            @click="reservasStore.realizarCheckin(item.codigo)">
             Confirmar agora
           </button>
 

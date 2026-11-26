@@ -51,13 +51,13 @@ const suporteStore = useSuporteStore()
           v-for="item in checklistEmbarqueData"
           :key="item"
           class="linha-check"
-          :class="{ marcado: suporteStore.dados.documentosConferidos.includes(item) }"
-        >
+          :class="{ marcado: suporteStore.dados.documentosConferidos.includes(item) }">
+
           <input
             type="checkbox"
             :checked="suporteStore.dados.documentosConferidos.includes(item)"
-            @change="suporteStore.alternarDocumento(item)"
-          />
+            @change="suporteStore.alternarDocumento(item)"/>
+
           <span>{{ item }}</span>
         </label>
       </div>
