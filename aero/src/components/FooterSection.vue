@@ -63,9 +63,18 @@ function enviarNewsletter() {
       <div class="coluna-rodape">
         <h4>Entre em contato conosco</h4>
         <div class="lista-links-rodape">
-          <a href="#" target="_blank">Instagram</a>
-          <a href="#" target="_blank">Facebook</a>
-          <a href="#" target="_blank">X (Twitter)</a>
+          <a href="#" target="_blank" class="link-social">
+            <img class="icone-social" src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="" />
+            Instagram
+          </a>
+          <a href="#" target="_blank" class="link-social">
+            <img class="icone-social" src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="" />
+            Facebook
+          </a>
+          <a href="#" target="_blank" class="link-social">
+            <img class="icone-social" src="https://cdn-icons-png.flaticon.com/512/5968/5968958.png" alt="" />
+            X (Twitter)
+          </a>
         </div>
       </div>
     </div>
@@ -138,6 +147,19 @@ function enviarNewsletter() {
 
 .lista-links-rodape a:hover {
   color: var(--laranja);
+}
+
+.link-social {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icone-social {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  object-fit: contain;
 }
 
 .faixa-legal {
